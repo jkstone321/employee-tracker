@@ -20,7 +20,7 @@
   
   ## Preview
 
-  ![Screenshot of the home page](./assets/screenshot.png)
+  ![Screenshot of the home page](./Assets/screenshot.png)
   
   Video of the application in use https://youtu.be/kWmwFkQAVrE
   
