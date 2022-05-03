@@ -226,7 +226,19 @@ class Prompts {
                 }
             ])
             .then((data) => {
-                console.log(data);
+                if(data.manId == "") {
+                    var manID = null;
+                } else {
+                    manID = data.manId;
+                }
+                db.query(`INSERT INTO employees (first_name, last_name, role_id, manager_id)
+                VALUES ("${data.fName}", "${data.lName}", ${data.role}, ${manID});`, (err, results) => {
+                    if(err) {
+                        console.log(err);
+                    }
+                    console.log("Success!");
+                    this.start();
+                });
             });
         });
     }
